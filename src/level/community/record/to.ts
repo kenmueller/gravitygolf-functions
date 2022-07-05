@@ -10,7 +10,7 @@ const communityLevelToRecord = (
 	antigravity: level.antigravity,
 	stars: level.stars,
 	attempts: level.attempts,
-	completions: level.completions
+	wins: level.wins
 })
 
 export default communityLevelToRecord

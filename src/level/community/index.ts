@@ -5,6 +5,6 @@ export default interface CommunityLevel {
 	antigravity: number
 	stars: number
 	attempts: number
-	completions: number
+	wins: number
 	data: unknown
 }
