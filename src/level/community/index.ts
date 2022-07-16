@@ -6,5 +6,5 @@ export default interface CommunityLevel {
 	stars: number
 	attempts: number
 	wins: number
-	data: unknown
+	data: string
 }
