@@ -10,12 +10,12 @@ const firestore = getFirestore()
 const userCreated = authTrigger.user().beforeCreate(async user => {
 	const promises: Promise<unknown>[] = []
 
-	let name: string
+	let name: string | null
 
 	if (user.displayName) {
 		name = user.displayName
 	} else {
-		name = (user.email && nameFromEmail(user.email)) || 'Anonymous'
+		name = (user.email && nameFromEmail(user.email)) || null
 		promises.push(auth.updateUser(user.uid, { displayName: name }))
 	}
 
