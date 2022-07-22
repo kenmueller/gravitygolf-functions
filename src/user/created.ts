@@ -7,7 +7,7 @@ import nameFromEmail from '../name/from/email'
 const auth = getAuth()
 const firestore = getFirestore()
 
-const userCreated = authTrigger.user().beforeCreate(async user => {
+const userCreated = authTrigger.user().onCreate(async user => {
 	const promises: Promise<unknown>[] = []
 
 	let name: string | null
